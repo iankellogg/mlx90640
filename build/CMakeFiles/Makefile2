@@ -72,7 +72,7 @@ CMAKE_BINARY_DIR = /home/cannon/RaspberryPi/cpp/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/MLX90640.dir/all
+all: CMakeFiles/mlx90640.dir/all
 all: CMakeFiles/main.dir/all
 
 .PHONY : all
@@ -83,38 +83,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/MLX90640.dir/clean
+clean: CMakeFiles/mlx90640.dir/clean
 clean: CMakeFiles/run.dir/clean
 clean: CMakeFiles/main.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MLX90640.dir
+# Target rules for target CMakeFiles/mlx90640.dir
 
 # All Build rule for target.
-CMakeFiles/MLX90640.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cannon/RaspberryPi/cpp/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target MLX90640"
-.PHONY : CMakeFiles/MLX90640.dir/all
+CMakeFiles/mlx90640.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cannon/RaspberryPi/cpp/build/CMakeFiles --progress-num=8,9,10,11,12,13 "Built target mlx90640"
+.PHONY : CMakeFiles/mlx90640.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MLX90640.dir/rule: cmake_check_build_system
+CMakeFiles/mlx90640.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cannon/RaspberryPi/cpp/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MLX90640.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mlx90640.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cannon/RaspberryPi/cpp/build/CMakeFiles 0
-.PHONY : CMakeFiles/MLX90640.dir/rule
+.PHONY : CMakeFiles/mlx90640.dir/rule
 
 # Convenience name for target.
-MLX90640: CMakeFiles/MLX90640.dir/rule
+mlx90640: CMakeFiles/mlx90640.dir/rule
 
-.PHONY : MLX90640
+.PHONY : mlx90640
 
 # clean rule for target.
-CMakeFiles/MLX90640.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/clean
-.PHONY : CMakeFiles/MLX90640.dir/clean
+CMakeFiles/mlx90640.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/clean
+.PHONY : CMakeFiles/mlx90640.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/run.dir
@@ -150,7 +150,7 @@ CMakeFiles/run.dir/clean:
 CMakeFiles/main.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cannon/RaspberryPi/cpp/build/CMakeFiles --progress-num=7,8,9,10,11,12,13 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cannon/RaspberryPi/cpp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.

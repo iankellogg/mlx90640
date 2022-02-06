@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libMLX90640.so"
+			"path" : "libmlx90640.so"
 		}
 	],
 	"backtrace" : 1,
@@ -65,7 +65,7 @@
 			"defines" : 
 			[
 				{
-					"define" : "MLX90640_EXPORTS"
+					"define" : "mlx90640_EXPORTS"
 				}
 			],
 			"includes" : 
@@ -102,7 +102,7 @@
 			]
 		}
 	],
-	"id" : "MLX90640::@6890427a1f51a3e7e1df",
+	"id" : "mlx90640::@6890427a1f51a3e7e1df",
 	"install" : 
 	{
 		"destinations" : 
@@ -132,8 +132,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "MLX90640",
-	"nameOnDisk" : "libMLX90640.so",
+	"name" : "mlx90640",
+	"nameOnDisk" : "libmlx90640.so",
 	"paths" : 
 	{
 		"build" : ".",

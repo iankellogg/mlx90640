@@ -1,5 +1,5 @@
 /usr/local/lib/arm-linux-gnueabihf/libMLX90640.so.1.0.0
 /usr/local/lib/arm-linux-gnueabihf/libMLX90640.so.1
 /usr/local/lib/arm-linux-gnueabihf/libMLX90640.so
-/usr/local/include/MLX90640_API.h
+/usr/local/include/MLX90640.h
 /usr/local/share/pkgconfig/mlx90640.pc

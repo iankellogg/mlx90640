@@ -176,17 +176,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MLX90640
+# Target rules for targets named mlx90640
 
 # Build rule for target.
-MLX90640: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MLX90640
-.PHONY : MLX90640
+mlx90640: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mlx90640
+.PHONY : mlx90640
 
 # fast build rule for target.
-MLX90640/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/build
-.PHONY : MLX90640/fast
+mlx90640/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/build
+.PHONY : mlx90640/fast
 
 #=============================================================================
 # Target rules for targets named run
@@ -220,7 +220,7 @@ Source/mlx90640-driver/MLX90640_API.o: Source/mlx90640-driver/MLX90640_API.c.o
 
 # target to build an object file
 Source/mlx90640-driver/MLX90640_API.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_API.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_API.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_API.c.o
 .PHONY : Source/mlx90640-driver/MLX90640_API.c.o
 
@@ -230,7 +230,7 @@ Source/mlx90640-driver/MLX90640_API.i: Source/mlx90640-driver/MLX90640_API.c.i
 
 # target to preprocess a source file
 Source/mlx90640-driver/MLX90640_API.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_API.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_API.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_API.c.i
 .PHONY : Source/mlx90640-driver/MLX90640_API.c.i
 
@@ -240,7 +240,7 @@ Source/mlx90640-driver/MLX90640_API.s: Source/mlx90640-driver/MLX90640_API.c.s
 
 # target to generate assembly for a file
 Source/mlx90640-driver/MLX90640_API.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_API.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_API.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_API.c.s
 .PHONY : Source/mlx90640-driver/MLX90640_API.c.s
 
@@ -250,7 +250,7 @@ Source/mlx90640-driver/MLX90640_I2C_Driver.o: Source/mlx90640-driver/MLX90640_I2
 
 # target to build an object file
 Source/mlx90640-driver/MLX90640_I2C_Driver.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.o
 .PHONY : Source/mlx90640-driver/MLX90640_I2C_Driver.c.o
 
@@ -260,7 +260,7 @@ Source/mlx90640-driver/MLX90640_I2C_Driver.i: Source/mlx90640-driver/MLX90640_I2
 
 # target to preprocess a source file
 Source/mlx90640-driver/MLX90640_I2C_Driver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.i
 .PHONY : Source/mlx90640-driver/MLX90640_I2C_Driver.c.i
 
@@ -270,7 +270,7 @@ Source/mlx90640-driver/MLX90640_I2C_Driver.s: Source/mlx90640-driver/MLX90640_I2
 
 # target to generate assembly for a file
 Source/mlx90640-driver/MLX90640_I2C_Driver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.s
 .PHONY : Source/mlx90640-driver/MLX90640_I2C_Driver.c.s
 
@@ -280,7 +280,7 @@ Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.o: Source/mlx90640-driver/MLX90
 
 # target to build an object file
 Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.o
 .PHONY : Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.o
 
@@ -290,7 +290,7 @@ Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.i: Source/mlx90640-driver/MLX90
 
 # target to preprocess a source file
 Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.i
 .PHONY : Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.i
 
@@ -300,7 +300,7 @@ Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.s: Source/mlx90640-driver/MLX90
 
 # target to generate assembly for a file
 Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.s
 .PHONY : Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.s
 
@@ -310,7 +310,7 @@ Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.o: Source/mlx90640-driver/MLX9
 
 # target to build an object file
 Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.o
 .PHONY : Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.o
 
@@ -320,7 +320,7 @@ Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.i: Source/mlx90640-driver/MLX9
 
 # target to preprocess a source file
 Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.i
 .PHONY : Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.i
 
@@ -330,7 +330,7 @@ Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.s: Source/mlx90640-driver/MLX9
 
 # target to generate assembly for a file
 Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.s
 .PHONY : Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.s
 
@@ -340,7 +340,7 @@ Source/mlx90640-driver/MLX90640_SWI2C_Driver.o: Source/mlx90640-driver/MLX90640_
 
 # target to build an object file
 Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.o
 .PHONY : Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.o
 
@@ -350,7 +350,7 @@ Source/mlx90640-driver/MLX90640_SWI2C_Driver.i: Source/mlx90640-driver/MLX90640_
 
 # target to preprocess a source file
 Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.i
 .PHONY : Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.i
 
@@ -360,7 +360,7 @@ Source/mlx90640-driver/MLX90640_SWI2C_Driver.s: Source/mlx90640-driver/MLX90640_
 
 # target to generate assembly for a file
 Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MLX90640.dir/build.make CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mlx90640.dir/build.make CMakeFiles/mlx90640.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.s
 .PHONY : Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.s
 
@@ -404,8 +404,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... run"
-	@echo "... MLX90640"
 	@echo "... main"
+	@echo "... mlx90640"
 	@echo "... Source/mlx90640-driver/MLX90640_API.o"
 	@echo "... Source/mlx90640-driver/MLX90640_API.i"
 	@echo "... Source/mlx90640-driver/MLX90640_API.s"
