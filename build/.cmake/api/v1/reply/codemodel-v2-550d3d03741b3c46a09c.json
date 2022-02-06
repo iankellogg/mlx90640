@@ -43,14 +43,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Release-e45ff81c6c2aa1e9d7ae.json",
+					"jsonFile" : "target-main-Release-a05e064737360b55255d.json",
 					"name" : "main",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "mlx90640::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-mlx90640-Release-308edf7c299af0992a07.json",
+					"jsonFile" : "target-mlx90640-Release-14befbbec71c6d80823f.json",
 					"name" : "mlx90640",
 					"projectIndex" : 0
 				},

@@ -203,12 +203,12 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Include/mlx90640-driver/MLX90640.h",
+			"path" : "Include/mlx90640-driver/MLX90640_I2C_Driver.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Include/mlx90640-driver/MLX90640_I2C_Driver.h",
+			"path" : "Include/mlx90640-driver/mlx90640.h",
 			"sourceGroupIndex" : 1
 		}
 	],

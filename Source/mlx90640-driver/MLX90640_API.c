@@ -15,7 +15,7 @@
  *
  */
 #include <MLX90640_I2C_Driver.h>
-#include <MLX90640.h>
+#include <mlx90640.h>
 #include <math.h>
 
 void ExtractVDDParameters(uint16_t *eeData, paramsMLX90640 *mlx90640);

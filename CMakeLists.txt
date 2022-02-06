@@ -38,7 +38,7 @@ target_link_libraries(main PRIVATE SDL2 SDL2_ttf  m  pigpiod_if2 )
 add_custom_target (run COMMAND ${EXECUTABLE_OUTPUT_PATH}/main)
 
 
-file(GLOB_RECURSE LIB_INCLUDES "Include/*.h")
+file(GLOB_RECURSE LIB_INCLUDES "Include/*.h" "MLX90640_conf.h")
 file(GLOB_RECURSE LIB_SOURCES "Source/mlx90640-driver/*.c")
 add_library(mlx90640 SHARED ${LIB_SOURCES} ${LIB_INCLUDES})
 include(GNUInstallDirs)
