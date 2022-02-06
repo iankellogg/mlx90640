@@ -25,7 +25,7 @@
  * higher frequency.
  */
 #include "MLX90640_I2C_Driver.h"
-#if USE_SWI2C
+#if MLX90640_USE_SWI2C
 #include "mbed.h"
 
 

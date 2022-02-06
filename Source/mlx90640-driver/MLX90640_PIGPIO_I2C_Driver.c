@@ -15,7 +15,7 @@
  *
  */
 #include "MLX90640_I2C_Driver.h"
-#if USE_PIGPIO_I2C
+#if MLX90640_USE_PIGPIO_I2C
 
 #include <unistd.h>
 #include <stdio.h>

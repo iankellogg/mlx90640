@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10 -DMLX90640_EXPORTS -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -fPIC -std=gnu11 -o CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_API.c.o -c /home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_API.c",
+  "file": "/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_API.c"
+},
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10 -DMLX90640_EXPORTS -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -fPIC -std=gnu11 -o CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.o -c /home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_I2C_Driver.c",
+  "file": "/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_I2C_Driver.c"
+},
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10 -DMLX90640_EXPORTS -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -fPIC -std=gnu11 -o CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.o -c /home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c",
+  "file": "/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c"
+},
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10 -DMLX90640_EXPORTS -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -fPIC -std=gnu11 -o CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.o -c /home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c",
+  "file": "/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c"
+},
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10 -DMLX90640_EXPORTS -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -fPIC -std=gnu11 -o CMakeFiles/MLX90640.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.o -c /home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c",
+  "file": "/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c"
+},
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10  -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/main.dir/main.c.o -c /home/cannon/RaspberryPi/cpp/main.c",
+  "file": "/home/cannon/RaspberryPi/cpp/main.c"
+},
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10  -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_API.c.o -c /home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_API.c",
+  "file": "/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_API.c"
+},
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10  -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_I2C_Driver.c.o -c /home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_I2C_Driver.c",
+  "file": "/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_I2C_Driver.c"
+},
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10  -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c.o -c /home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c",
+  "file": "/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_LINUX_I2C_Driver.c"
+},
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10  -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c.o -c /home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c",
+  "file": "/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c"
+},
+{
+  "directory": "/home/cannon/RaspberryPi/cpp/build",
+  "command": "/bin/gcc-10  -I/home/cannon/RaspberryPi/cpp -I/home/cannon/RaspberryPi/cpp/Include -I/home/cannon/RaspberryPi/cpp/Include/mlx90640-driver -I/usr/include/SDL2 -I/home/cannon/RaspberryPi/cpp/build -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/main.dir/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c.o -c /home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c",
+  "file": "/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_SWI2C_Driver.c"
+}
+]

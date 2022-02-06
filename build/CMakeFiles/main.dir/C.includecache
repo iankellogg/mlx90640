@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Include/mlx90640-driver/MLX90640.h
+stdint.h
+-
+
+/home/cannon/RaspberryPi/cpp/main.c
+stdint.h
+-
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+time.h
+-
+math.h
+-
+MLX90640.h
+/home/cannon/RaspberryPi/cpp/MLX90640.h
+unistd.h
+-
+SDL2/SDL.h
+-
+SDL2/SDL_ttf.h
+-
+SDL2/SDL_render.h
+-
+

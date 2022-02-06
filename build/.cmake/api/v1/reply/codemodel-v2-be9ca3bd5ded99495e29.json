@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MLX90640",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "MLX90640::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MLX90640-Release-b2118b78ee3ad75bc53c.json",
+					"name" : "MLX90640",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Release-e45ff81c6c2aa1e9d7ae.json",
+					"name" : "main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run-Release-a86039fce0eca0515e80.json",
+					"name" : "run",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/cannon/RaspberryPi/cpp/build",
+		"source" : "/home/cannon/RaspberryPi/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

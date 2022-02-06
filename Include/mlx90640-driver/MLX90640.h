@@ -19,6 +19,8 @@
 
 #define SCALEALPHA 0.000001
     
+   #include <stdint.h>
+    
 typedef struct
     {
         int16_t kVdd;

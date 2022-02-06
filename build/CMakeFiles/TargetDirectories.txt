@@ -1,0 +1,9 @@
+/home/cannon/RaspberryPi/cpp/build/CMakeFiles/install/strip.dir
+/home/cannon/RaspberryPi/cpp/build/CMakeFiles/list_install_components.dir
+/home/cannon/RaspberryPi/cpp/build/CMakeFiles/install/local.dir
+/home/cannon/RaspberryPi/cpp/build/CMakeFiles/rebuild_cache.dir
+/home/cannon/RaspberryPi/cpp/build/CMakeFiles/edit_cache.dir
+/home/cannon/RaspberryPi/cpp/build/CMakeFiles/MLX90640.dir
+/home/cannon/RaspberryPi/cpp/build/CMakeFiles/run.dir
+/home/cannon/RaspberryPi/cpp/build/CMakeFiles/install.dir
+/home/cannon/RaspberryPi/cpp/build/CMakeFiles/main.dir

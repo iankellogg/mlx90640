@@ -1,0 +1,12 @@
+prefix=/usr/local
+exec_prefix=/usr/local
+libdir=${exec_prefix}/lib/arm-linux-gnueabihf
+includedir=${prefix}/include
+
+Name: MLX90640
+Description: Driver for interfacing with MLX90640
+Version: 1.0.0
+
+Requires:
+Libs: -L${libdir} -lmlx90640
+Cflags: -I${includedir}

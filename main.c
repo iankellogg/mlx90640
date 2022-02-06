@@ -6,7 +6,8 @@
 //#include <chrono>
 #include <time.h>
 #include <math.h>
-#include "MLX90640_API.h"
+#include "MLX90640.h"
+#include <unistd.h>
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
