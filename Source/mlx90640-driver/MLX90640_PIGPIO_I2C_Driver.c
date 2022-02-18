@@ -26,6 +26,7 @@
 
 
 
+
 typedef enum 
 {
     I2CCMD_END     = 0x00,
@@ -53,10 +54,10 @@ void MLX90640_I2CInit()
          printf("Unable to connect to PIGPIOD\r\n");
          return;
      }
-     // open i2c
-     
-
-     
+}
+void MLX90640_Delay(uint32_t uSec)
+{
+    usleep(uSec);
 }
 
 int MLX90640_I2CRead(uint8_t slaveAddr, uint16_t startAddress, uint16_t nMemAddressRead, uint16_t *data)

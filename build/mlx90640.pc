@@ -5,7 +5,7 @@ includedir=${prefix}/include
 
 Name: MLX90640
 Description: Driver for interfacing with MLX90640
-Version: 1.0.0
+Version: 1.1.0
 
 Requires:
 Libs: -L${libdir} -lmlx90640

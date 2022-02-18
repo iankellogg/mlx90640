@@ -26,19 +26,3 @@ mlx90640.h
 math.h
 -
 
-/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_PIGPIO_I2C_Driver.c
-MLX90640_I2C_Driver.h
-/home/cannon/RaspberryPi/cpp/Source/mlx90640-driver/MLX90640_I2C_Driver.h
-unistd.h
--
-stdio.h
--
-fcntl.h
--
-string.h
--
-pigpiod_if2.h
--
-assert.h
--
-

@@ -7,7 +7,7 @@ file(REMOVE_RECURSE
   "libmlx90640.pdb"
   "libmlx90640.so"
   "libmlx90640.so.1"
-  "libmlx90640.so.1.0.0"
+  "libmlx90640.so.1.1.0"
 )
 
 # Per-language clean rules from dependency scanning.

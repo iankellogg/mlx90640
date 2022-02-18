@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(MLX90640 VERSION 1.0.0 DESCRIPTION "Driver for interfacing with MLX90640")
+project(MLX90640 VERSION 1.1.0 DESCRIPTION "Driver for interfacing with MLX90640")
 
 set(CMAKE_PREFIX_PATH "/usr/local")
 set(CMAKE_C_STANDARD 11)#C11

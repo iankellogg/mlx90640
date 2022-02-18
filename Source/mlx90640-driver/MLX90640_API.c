@@ -45,7 +45,6 @@ int MLX90640_DumpEE(uint8_t slaveAddr, uint16_t *eeData)
 
 int MLX90640_SynchFrame(uint8_t slaveAddr)
 {
-    uint16_t dataReady = 0;
     uint16_t statusRegister;
     int error = 1;
     
@@ -55,14 +54,15 @@ int MLX90640_SynchFrame(uint8_t slaveAddr)
         return error;
     }
     
-    while(dataReady == 0)
+        error = MLX90640_I2CRead(slaveAddr, 0x8000, 1, &statusRegister);
+    while(statusRegister & 0x0008 == 0)
     {
+        MLX90640_Delay(1000);
         error = MLX90640_I2CRead(slaveAddr, 0x8000, 1, &statusRegister);
         if(error != 0)
         {
             return error;
         }    
-        dataReady = statusRegister & 0x0008;
     }      
     
    return 0;   
@@ -112,21 +112,23 @@ int MLX90640_TriggerMeasurement(uint8_t slaveAddr)
     
 int MLX90640_GetFrameData(uint8_t slaveAddr, uint16_t *frameData)
 {
-    uint16_t dataReady = 0;
+    
     uint16_t controlRegister1;
     uint16_t statusRegister;
     int error = 1;
     uint16_t data[64];
     uint8_t cnt = 0;
     
-    while(dataReady == 0)
+    // Wait for data to be ready
+    error = MLX90640_I2CRead(slaveAddr, 0x8000, 1, &statusRegister);
+    while((statusRegister & 0x0008) == 0)
     {
+        MLX90640_Delay(1000); // sleep for 1ms
         error = MLX90640_I2CRead(slaveAddr, 0x8000, 1, &statusRegister);
         if(error != 0)
         {
             return error;
         }    
-        dataReady = statusRegister & 0x0008;
     }      
     
     error = MLX90640_I2CWrite(slaveAddr, 0x8000, 0x0030);
@@ -690,7 +692,7 @@ float MLX90640_GetTa(uint16_t *frameData, const paramsMLX90640 *params)
 
 //------------------------------------------------------------------------------
 
-int MLX90640_GetSubPageNumber(uint16_t *frameData)
+inline int MLX90640_GetSubPageNumber(uint16_t *frameData)
 {
     return frameData[833];    
 
