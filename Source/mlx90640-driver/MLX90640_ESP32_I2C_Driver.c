@@ -21,10 +21,16 @@
 #include <esp_err.h>
 #include <esp_log.h>
 
-
-static i2c_cmd_handle_t i2c_command;
-static uint8_t  currentCmdBuffer[I2C_LINK_RECOMMENDED_SIZE(7)];
+static bool init=false;
+static uint8_t  currentCmdBuffer[I2C_LINK_RECOMMENDED_SIZE(10)];
 static uint8_t buf[1664];
+
+void MLX90640_Delay(uint32_t uSec)
+{
+		//ESP_LOGE(__func__,"Sleep Time %d",uSec/1000);
+
+    vTaskDelay((uSec/1000)/portTICK_PERIOD_MS);
+}
 
 void MLX90640_I2CInit()
 {   
@@ -72,7 +78,7 @@ void MLX90640_I2CInit()
 	  Install I2C driver
 	  ------------------------------------------------------------------------*/
 
-	esp_status =	i2c_driver_install(MLX90640_ESP_I2C_INTERFACE,I2C_MODE_MASTER,0,0,0);
+	esp_status =	i2c_driver_install(MLX90640_ESP_I2C_INTERFACE,I2C_MODE_MASTER,0,0,ESP_INTR_FLAG_IRAM );
 	if (esp_status != ESP_OK) {
 		ESP_LOGE(__func__,"%s(): I2C driver install failed\r\n",__func__);
 	}
@@ -152,7 +158,6 @@ void MLX90640_I2CInit()
 			case ESP_ERR_TIMEOUT:
 				ESP_LOGE(__func__,"%s(): i2c_master_cmd_begin() timeout\r\n",__func__);
 				break;
-
 			default:
 				ESP_LOGE(__func__,"%s(): i2c_master_cmd_begin() failed\r\n",__func__);
 				break;
@@ -165,6 +170,7 @@ free_i2c_command_link:
 	ESP_LOGE(__func__,"%s(): End of kludge to get bus/chip working; errors should no longer be ignored\n",__func__);
 
 	i2c_cmd_link_delete(i2c_command);
+	init=true;
 
 }
 
@@ -175,7 +181,14 @@ int MLX90640_I2CGeneralReset(void)
 
 int MLX90640_I2CRead(uint8_t slaveAddr, uint16_t startAddress, uint16_t nMemAddressRead, uint16_t *data)
 {
-	i2c_command = i2c_cmd_link_create_static(currentCmdBuffer, I2C_LINK_RECOMMENDED_SIZE(7));
+	i2c_cmd_handle_t i2c_command;
+	if (init==false)
+	{
+    	MLX90640_I2CInit();
+	}
+	assert(init);
+	//ESP_LOGD(__func__,"Read %d",nMemAddressRead);
+	i2c_command = i2c_cmd_link_create_static(currentCmdBuffer, I2C_LINK_RECOMMENDED_SIZE(10));
 
     int result;
     // 1 byte for escape, 1 byte for addr cmd, 2 bytes for addr, 1 byte for escape, 1 byte for read, 
@@ -198,7 +211,8 @@ int MLX90640_I2CRead(uint8_t slaveAddr, uint16_t startAddress, uint16_t nMemAddr
 	esp_err_t esp_status = ESP_OK;
 	esp_status |= i2c_master_start(i2c_command);
 	esp_status |= i2c_master_write_byte(i2c_command,((slaveAddr << 1)|I2C_MASTER_WRITE),1);
-	esp_status |= i2c_master_write(i2c_command,startAddress,2,true);
+	esp_status |= i2c_master_write_byte(i2c_command,startAddress>>8,true);
+	esp_status |= i2c_master_write_byte(i2c_command,startAddress&0xff,true);
 	esp_status |= i2c_master_start(i2c_command);
 	esp_status |= i2c_master_write_byte(i2c_command,((slaveAddr << 1)|I2C_MASTER_READ),1);
 	esp_status |= i2c_master_read(i2c_command, buf,nMemAddressRead, I2C_MASTER_LAST_NACK);
@@ -207,6 +221,7 @@ int MLX90640_I2CRead(uint8_t slaveAddr, uint16_t startAddress, uint16_t nMemAddr
 
 	if (esp_status != ESP_OK) {
 		ESP_LOGE(__func__,"i2c cmd build failed\r\n");
+		i2c_cmd_link_delete(i2c_command);
 		return esp_status;
 	}
 
@@ -223,8 +238,14 @@ int MLX90640_I2CRead(uint8_t slaveAddr, uint16_t startAddress, uint16_t nMemAddr
 				ESP_LOGE(__func__,"i2c_master_cmd_begin() timeout\r\n");
 				break;
 
+			case ESP_ERR_INVALID_ARG:
+				ESP_LOGE(__func__,"i2c_master_cmd_begin() Invalid Arg\r\n");
+				break;
+			case ESP_FAIL:
+				ESP_LOGE(__func__,"i2c_master_cmd_begin() Slave NACK\r\n");
+				break;
 			default:
-				ESP_LOGE(__func__,"i2c_master_cmd_begin() failed\r\n");
+				ESP_LOGE(__func__,"i2c_master_cmd_begin() failed: %d\r\n",esp_status);
 				break;
 		}
 
@@ -236,6 +257,7 @@ int MLX90640_I2CRead(uint8_t slaveAddr, uint16_t startAddress, uint16_t nMemAddr
         *p++ = ((uint16_t)buf[i] << 8) | buf[i + 1];
     }
 
+	i2c_cmd_link_delete(i2c_command);
     return esp_status;
 }
 
@@ -245,19 +267,29 @@ void MLX90640_I2CFreqSet(int freq)
 
 int MLX90640_I2CWrite(uint8_t slaveAddr, uint16_t writeAddress, uint16_t data)
 { 
-	i2c_command = i2c_cmd_link_create_static(currentCmdBuffer, I2C_LINK_RECOMMENDED_SIZE(6));
+	i2c_cmd_handle_t i2c_command;
+	if (init==false)
+	{
+    	MLX90640_I2CInit();
+	}
+	assert(init);
+	//ESP_LOGD(__func__,"Write: %X %X",writeAddress,data);
+	i2c_command = i2c_cmd_link_create_static(currentCmdBuffer, I2C_LINK_RECOMMENDED_SIZE(10));
     
    
 	esp_err_t esp_status = ESP_OK;
 	esp_status |= i2c_master_start(i2c_command);
 	esp_status |= i2c_master_write_byte(i2c_command,((slaveAddr << 1)|I2C_MASTER_WRITE),1);
-	esp_status |= i2c_master_write(i2c_command,writeAddress,2,true);
-	esp_status |= i2c_master_write(i2c_command,data,2,true);
+	esp_status |= i2c_master_write_byte(i2c_command,writeAddress>>8,true);
+	esp_status |= i2c_master_write_byte(i2c_command,writeAddress&0xff,true);
+	esp_status |= i2c_master_write_byte(i2c_command,data>>8,true);
+	esp_status |= i2c_master_write_byte(i2c_command,data&0xff,true);
 	esp_status |= i2c_master_stop(i2c_command);
 
 
 	if (esp_status != ESP_OK) {
 		ESP_LOGE(__func__,"i2c cmd build failed\r\n");
+		i2c_cmd_link_delete(i2c_command);
 		return esp_status;
 	}
 
@@ -267,17 +299,24 @@ int MLX90640_I2CWrite(uint8_t slaveAddr, uint16_t writeAddress, uint16_t data)
 		case ESP_OK:
 			break;
 			case ESP_ERR_INVALID_STATE:
-				ESP_LOGE(__func__,"%s(): i2c_master_cmd_begin() invalid I2C state\r\n",__func__);
+				ESP_LOGE(__func__,"i2c_master_cmd_begin() invalid I2C state\r\n");
 				break;
 
 			case ESP_ERR_TIMEOUT:
-				ESP_LOGE(__func__,"%s(): i2c_master_cmd_begin() timeout\r\n",__func__);
+				ESP_LOGE(__func__,"i2c_master_cmd_begin() timeout\r\n");
 				break;
 
+			case ESP_ERR_INVALID_ARG:
+				ESP_LOGE(__func__,"i2c_master_cmd_begin() Invalid Arg\r\n");
+				break;
+			case ESP_FAIL:
+				ESP_LOGE(__func__,"i2c_master_cmd_begin() Slave NACK\r\n");
+				break;
 			default:
-				ESP_LOGE(__func__,"%s(): i2c_master_cmd_begin() failed\r\n",__func__);
+				ESP_LOGE(__func__,"i2c_master_cmd_begin() failed: %d\r\n",esp_status);
 				break;
 		}
+	i2c_cmd_link_delete(i2c_command);
     return esp_status;
 }
 
