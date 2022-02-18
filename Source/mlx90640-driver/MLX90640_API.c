@@ -55,9 +55,9 @@ int MLX90640_SynchFrame(uint8_t slaveAddr)
     }
     
         error = MLX90640_I2CRead(slaveAddr, 0x8000, 1, &statusRegister);
-    while(statusRegister & 0x0008 == 0)
+    while((statusRegister & 0x0008) == 0)
     {
-        MLX90640_Delay(1000);
+        MLX90640_Delay(10000);
         error = MLX90640_I2CRead(slaveAddr, 0x8000, 1, &statusRegister);
         if(error != 0)
         {
@@ -123,7 +123,7 @@ int MLX90640_GetFrameData(uint8_t slaveAddr, uint16_t *frameData)
     error = MLX90640_I2CRead(slaveAddr, 0x8000, 1, &statusRegister);
     while((statusRegister & 0x0008) == 0)
     {
-        MLX90640_Delay(1000); // sleep for 1ms
+        MLX90640_Delay(10000); // sleep for 10ms
         error = MLX90640_I2CRead(slaveAddr, 0x8000, 1, &statusRegister);
         if(error != 0)
         {
@@ -303,7 +303,7 @@ int MLX90640_SetRefreshRate(uint8_t slaveAddr, uint8_t refreshRate)
     error = MLX90640_I2CRead(slaveAddr, 0x800D, 1, &controlRegister1);
     if(error == 0)
     {
-        value = (controlRegister1 & 0xFC7F) | value;
+        value = (controlRegister1 | value);
         error = MLX90640_I2CWrite(slaveAddr, 0x800D, value);
     }    
     
@@ -321,9 +321,11 @@ int MLX90640_GetRefreshRate(uint8_t slaveAddr)
     error = MLX90640_I2CRead(slaveAddr, 0x800D, 1, &controlRegister1);
     if(error != 0)
     {
+        printf("Bad Read Refresh Rate\r\n");
         return error;
     }    
-    refreshRate = (controlRegister1 & 0x0380) >> 7;
+    refreshRate = (controlRegister1) >> 7;
+    refreshRate = refreshRate&0x7;
     
     return refreshRate;
 }
